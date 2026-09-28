@@ -592,7 +592,11 @@
                   "api-reference/accounts/fetch-current-account-entitlements",
                   "api-reference/accounts/fetch-account-entitlements",
                   "api-reference/accounts/list-current-account-members-and-pending-invites",
-                  "api-reference/accounts/list-account-members-and-pending-invites"
+                  "api-reference/accounts/list-account-members-and-pending-invites",
+                  "api-reference/accounts/remove-a-current-account-member",
+                  "api-reference/accounts/update-a-current-account-member-role",
+                  "api-reference/accounts/remove-an-account-member",
+                  "api-reference/accounts/update-an-account-member-role"
                 ]
               },
               {
@@ -625,7 +629,8 @@
                   "api-reference/analytics/url-monitors",
                   "api-reference/analytics/list-all-available-reporting-metrics",
                   "api-reference/analytics/icmp-monitors",
-                  "api-reference/analytics/get-analytics-summary-for-multiple-checks"
+                  "api-reference/analytics/get-analytics-summary-for-multiple-checks",
+                  "api-reference/analytics/ssl-monitors"
                 ]
               },
               {
@@ -701,7 +706,15 @@
                       "api-reference/monitors/create-an-icmp-monitor",
                       "api-reference/monitors/update-an-icmp-monitor"
                     ]
-                  }
+                  },
+                  "api-reference/monitors/create-an-ssl-monitor",
+                  "api-reference/monitors/update-an-ssl-monitor",
+                  "api-reference/monitors/create-a-traceroute-monitor",
+                  "api-reference/monitors/update-a-traceroute-monitor",
+                  "api-reference/checks/list-all-checks-v2",
+                  "api-reference/checks/retrieve-a-check-v2",
+                  "api-reference/checks/list-all-checks-v3",
+                  "api-reference/checks/retrieve-a-check-v3"
                 ]
               },
               {
@@ -722,7 +735,9 @@
                   "api-reference/check-groups/retrieve-one-check-in-a-specific-group-with-group-settings-applied",
                   "api-reference/check-groups/retrieve-all-checks-in-a-specific-group-with-group-settings-applied",
                   "api-reference/check-groups/create-a-check-group",
-                  "api-reference/check-groups/update-a-check-group"
+                  "api-reference/check-groups/update-a-check-group",
+                  "api-reference/check-groups/retrieve-one-check-in-a-specific-group-with-group-settings-applied-v2",
+                  "api-reference/check-groups/retrieve-all-checks-in-a-specific-group-with-group-settings-applied-v2"
                 ]
               },
               {
@@ -730,7 +745,8 @@
                 "pages": [
                   "api-reference/check-results/lists-all-check-results",
                   "api-reference/check-results/retrieve-a-check-result",
-                  "api-reference/check-results/lists-all-check-results-1"
+                  "api-reference/check-results/lists-all-check-results-1",
+                  "api-reference/check-results/retrieve-a-normalized-asset-manifest-for-a-check-result"
                 ]
               },
               {
@@ -951,7 +967,9 @@
                   "api-reference/test-sessions/trigger-a-new-test-session",
                   "api-reference/test-sessions/retrieve-a-test-session",
                   "api-reference/test-sessions/await-the-completion-of-a-test-session",
-                  "api-reference/test-sessions/cancel-a-test-session"
+                  "api-reference/test-sessions/cancel-a-test-session",
+                  "api-reference/test-sessions/retrieve-a-test-session-result",
+                  "api-reference/test-sessions/retrieve-a-normalized-asset-manifest-for-a-test-session-result"
                 ]
               },
               {
@@ -961,6 +979,83 @@
                   "api-reference/test-session-error-groups/list-all-test-session-error-groups-for-a-project",
                   "api-reference/test-session-error-groups/retrieve-a-test-session-error-group",
                   "api-reference/test-session-error-groups/update-a-test-session-error-group"
+                ]
+              },
+              {
+                "group": "Deployment Triggers",
+                "pages": [
+                  "api-reference/deployment-triggers/list-all-deployment-triggers",
+                  "api-reference/deployment-triggers/create-a-deployment-trigger"
+                ]
+              },
+              {
+                "group": "Secret scans",
+                "pages": [
+                  "api-reference/secret-scans/lists-readable-configuration-values-that-look-like-inline-credentials"
+                ]
+              },
+              {
+                "group": "Usage",
+                "pages": [
+                  "api-reference/usage/get-paginated-usage-data-grouped-over-time",
+                  "api-reference/usage/get-organization-usage-totals-and-projections",
+                  "api-reference/usage/get-usage-terms-and-accounts-for-the-current-organization"
+                ]
+              },
+              {
+                "group": "Status Pages V3",
+                "pages": [
+                  "api-reference/status-pages-v3/list-v3-status-pages",
+                  "api-reference/status-pages-v3/create-a-new-v3-status-page",
+                  "api-reference/status-pages-v3/delete-a-v3-status-page",
+                  "api-reference/status-pages-v3/retrieve-a-single-v3-status-page-by-id",
+                  "api-reference/status-pages-v3/update-an-existing-v3-status-page",
+                  "api-reference/status-pages-v3/retrieve-custom-domain-verification-details-for-a-v3-status-page",
+                  "api-reference/status-pages-v3/re-check-the-custom-domain-verification-of-a-v3-status-page"
+                ]
+              },
+              {
+                "group": "Status Pages V3 Automation Rules",
+                "pages": [
+                  "api-reference/status-pages-v3-automation-rules/list-the-automation-rules-of-a-v3-status-page",
+                  "api-reference/status-pages-v3-automation-rules/create-an-automation-rule-on-a-v3-status-page",
+                  "api-reference/status-pages-v3-automation-rules/delete-an-automation-rule-of-a-v3-status-page",
+                  "api-reference/status-pages-v3-automation-rules/retrieve-a-single-automation-rule-of-a-v3-status-page",
+                  "api-reference/status-pages-v3-automation-rules/update-an-automation-rule-of-a-v3-status-page"
+                ]
+              },
+              {
+                "group": "Status Pages V3 Components",
+                "pages": [
+                  "api-reference/status-pages-v3-components/list-the-components-of-a-v3-status-page",
+                  "api-reference/status-pages-v3-components/create-a-component-on-a-v3-status-page",
+                  "api-reference/status-pages-v3-components/delete-a-component-of-a-v3-status-page",
+                  "api-reference/status-pages-v3-components/retrieve-a-single-component-of-a-v3-status-page",
+                  "api-reference/status-pages-v3-components/update-a-component-of-a-v3-status-page"
+                ]
+              },
+              {
+                "group": "Status Pages V3 Incidents",
+                "pages": [
+                  "api-reference/status-pages-v3-incidents/list-the-incidents-of-a-v3-status-page",
+                  "api-reference/status-pages-v3-incidents/open-an-incident-on-a-v3-status-page",
+                  "api-reference/status-pages-v3-incidents/delete-an-incident-of-a-v3-status-page",
+                  "api-reference/status-pages-v3-incidents/retrieve-an-incident-of-a-v3-status-page",
+                  "api-reference/status-pages-v3-incidents/update-an-incident-of-a-v3-status-page",
+                  "api-reference/status-pages-v3-incidents/replace-an-incident-s-component-impact-timeline",
+                  "api-reference/status-pages-v3-incidents/list-the-updates-of-an-incident",
+                  "api-reference/status-pages-v3-incidents/post-an-update-to-an-incident",
+                  "api-reference/status-pages-v3-incidents/delete-an-incident-update",
+                  "api-reference/status-pages-v3-incidents/retrieve-an-incident-update",
+                  "api-reference/status-pages-v3-incidents/edit-an-incident-update"
+                ]
+              },
+              {
+                "group": "Status Pages V3 Subscribers",
+                "pages": [
+                  "api-reference/status-pages-v3-subscribers/list-the-subscribers-of-a-v3-status-page",
+                  "api-reference/status-pages-v3-subscribers/subscribe-multiple-email-addresses-to-a-v3-status-page",
+                  "api-reference/status-pages-v3-subscribers/delete-a-subscriber-of-a-v3-status-page"
                 ]
               }
             ]
